@@ -1,24 +1,146 @@
 <!DOCTYPE html>
 <html lang="ko-KR" dir="ltr">
+
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
     <title>탭(Tabs) ─ NIA A11y UI Components using WAI-ARIA 1.0, jQuery</title>
     <!-- 모바일 최적화 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 데모 페이지 스타일 호출 -->
+    <!-- 페이지 스타일 호출 -->
+    <link rel="stylesheet" href="css/type-grid.css">
     <link rel="stylesheet" href="css/demo.css">
+    <!-- Font Awesome 호출 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <!-- jQuery 플러그인 테마 스타일 호출 -->
-    <link rel="stylesheet" href="lib/plugins/ripple/jquery.uiRipple.css">
-    <link rel="stylesheet" href="lib/plugins/tabs/jquery.uiTabs.css">
+    <link rel="stylesheet" href="lib/plugins/ripple/jquery.uiRipple.min.css">
+    <link rel="stylesheet" href="lib/plugins/tabs/jquery.uiTabs.min.css">
     <!-- jquery 라이브러리 호출 -->
     <script src="lib/jquery-2.2.3.min.js"></script>
     <!-- jQuery 플러그인 호출 -->
     <script src="lib/plugins/ripple/jquery.uiRipple.min.js"></script>
-    <script src="lib/plugins/tabs/jquery.uiTabs.js"></script>
+    <script src="lib/plugins/tabs/jquery.uiTabs.min.js"></script>
 </head>
-<body>
 
-<script src="js/demo.js"></script>
+<body>
+    <div class="page container">
+        <header class="page-header">
+            <row class="row">
+                <h1 class="headline col-12">Tabs UI 디자인, WAI-ARIA</h1>
+                <p class="col-12">탭 메뉴 UI는 뷰(View)간 전환이 손 쉬워야 하며, 카테고리 별 데이터 세트(Categorized Data Sets)를 탐색하기 용이해야 한다.</p>
+            </row>
+        </header>
+        <main>
+            <div class="row">
+                <!-- WAI-ARIA 사용 예제 -->
+                <div class="demo-tabs col-3">
+                    <!-- 탭 리스트 영역 -->
+                    <ul>
+                        <li><a href="#demo-home"><i class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
+                        <li><a href="#demo-news"><i class="fa fa-newspaper-o" aria-hidden="true"></i> 뉴스</a></li>
+                        <li><a href="#demo-accessibility"><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> 접근성</a></li>
+                    </ul>
+                    <!-- 탭 패널 영역 -->
+                    <div id="demo-home">
+                        <h3 class="tabpanel-headine">홈</h3>
+                        <img class="rwd-image" src="http://placehold.it/300x240/4d5acf/fff/?text=Home" width="300" height="240" alt="">
+                        <p><a href="#">야무</a> 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 젊음의 거추장스런 운동화도, 어디에나 하루를 설레게 청춘? 운동화도 씩씩하게, 어디에나, 사명으로 장엄한 쿵쿵대는 꽃처럼 햇볕처럼 너야말로.</p>
+                        <p>거추장스런, <a href="#">어디에나 숨 죽여도 너</a> 청춘 해도 엮어가는 그대, 심장 찬란한 젊음의 실수조차도 꽃보다 않고 쉬지 장엄한 내일의 빛나는 눈부신 청춘의.</p>
+                        <p>피어나는 그대 숨 죽여도 하고, 설레게 너야말로 다 들리는 심장 티셔츠. 땀 햇볕처럼, <a href="#">청춘의 젊음의 청춘아!</a> 사명으로 하고 운동화도, 만들 않고 찬란한?</p>
+                    </div>
+                    <div id="demo-news">
+                        <h3 class="tabpanel-headine">뉴스</h3>
+                        <img class="rwd-image" src="http://placehold.it/300x240/4d5acf/fff/?text=Deal" width="300" height="240" alt="">
+                        <p>장엄한 빛나는 가슴을 숨소리가. 가슴을 않고, 빛나는 엮어가는 소리 해도 내일의 너야말로, 청춘의 숨 죽여도 보기만 만들 땀 설레는 흐르는 티셔츠, 청춘 숨소리가 거추장스런 쉬지, 아름답다 쿵쿵대는 장엄한 고동소리 심장? 씩씩하게.</p>
+                        <p>가슴을 않고 어디에나 숨소리가 꽃보다 티셔츠 <a href="#">빛나는 소리</a>, 씩씩하게, 숨 죽여도 꽃처럼 피어나는, 너 사명으로 보기만 쿵쿵대는 내일의 그대 쉬지 실수조차도 거추장스런 청춘아!. 흐르는 쿵쿵대는 빛나는 해도? 꽃처럼 거추장스런 장엄한 너야말로.</p>
+                        <p>야무 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 만들 내일의 다 들리는 너 쿵쿵대는 젊음의 땀 꽃처럼. 젊음의 운동화도 가슴을 장엄한 숨소리가 찬란한 햇볕처럼 <a href="#">고동소리</a>, 땀 하고, 설레게, 눈부신 청춘의 너 사명으로 만들 꽃보다 해도!</p>
+                        <p>아름답다 세상을 소리 만들, 꽃보다 눈부신 피어나는! <a href="#">청춘의 씩씩하게 너 꽃처럼</a>, 숨 죽여도 어디에나 쿵쿵대는 너야말로 소리 고동소리 빛나는 아름다운, 햇볕처럼 눈부신 젊음의 보기만 장엄한 가슴을 사명으로 해도, 설레게 티셔츠 만들.</p>
+                    </div>
+                    <div id="demo-accessibility">
+                        <h3 class="tabpanel-headine">접근성</h3>
+                        <img class="rwd-image" src="http://placehold.it/300x240/4d5acf/fff/?text=A11y" width="300" height="240" alt="">
+                        <p>가슴을 않고 어디에나 숨소리가 꽃보다 티셔츠 <a href="#">빛나는 소리</a>, 씩씩하게, 숨 죽여도 꽃처럼 피어나는, 너 사명으로 보기만 쿵쿵대는 내일의 그대 쉬지 실수조차도 거추장스런 청춘아!. 흐르는 쿵쿵대는 빛나는 해도? 꽃처럼 거추장스런 장엄한 너야말로.</p>
+                        <p>아름답다 세상을 소리 만들, 꽃보다 눈부신 피어나는! <a href="#">청춘의 씩씩하게 너 꽃처럼</a>, 숨 죽여도 어디에나 쿵쿵대는 너야말로 소리 고동소리 빛나는 아름다운, 햇볕처럼 눈부신 젊음의 보기만 장엄한 가슴을 사명으로 해도, 설레게 티셔츠 만들.</p>
+                        <p>야무 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 만들 내일의 다 들리는 너 쿵쿵대는 젊음의 땀 꽃처럼. 젊음의 운동화도 가슴을 장엄한 숨소리가 찬란한 햇볕처럼 <a href="#">고동소리</a>, 땀 하고, 설레게, 눈부신 청춘의 너 사명으로 만들 꽃보다 해도!</p>
+                    </div>
+                </div>
+                <div class="demo-tabs-2 col-8 push-1">
+                    <ul>
+                        <li><a href="#demo-role">역할</a></li>
+                        <li><a href="#demo-props">속성</a></li>
+                        <li><a href="#demo-state">상태</a></li>
+                    </ul>
+                    <div id="demo-role">
+                        <h3>역할</h3>
+                        <ul class="demo-gallery clearfix">
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=1" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=2" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=3" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=4" width="240" height="240" alt=""></a>
+                            </li>
+                        </ul>
+                        <p>피어나는 그대 숨 죽여도 하고, 설레게 너야말로 다 들리는 심장 티셔츠. 땀 햇볕처럼, <a href="#">청춘의 젊음의 청춘아!</a> 사명으로 하고 운동화도, 만들 않고 찬란한?</p>
+                        <p>거추장스런, <a href="#">어디에나 숨 죽여도 너</a> 청춘 해도 엮어가는 그대, 심장 찬란한 젊음의 실수조차도 꽃보다 않고 쉬지 장엄한 내일의 빛나는 눈부신 청춘의.</p>
+                        <p><a href="#">야무</a> 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 젊음의 거추장스런 운동화도, 어디에나 하루를 설레게 청춘? 운동화도 씩씩하게, 어디에나, 사명으로 장엄한 쿵쿵대는 꽃처럼 햇볕처럼 너야말로. 야무 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 티셔츠 설레게 청춘 땀 않고 고동소리 세상을 하고 설레는 청춘아! 햇볕처럼 꽃보다 청춘의 장엄한 운동화도 젊음의 찬란한 가슴을, 아름답다 피어나는, 쉬지 어디에나 쿵쿵대는 심장. 햇볕처럼, 찬란한.</p>
+                    </div>
+                    <div id="demo-props">
+                        <h3>속성</h3>
+                        <ul class="demo-gallery clearfix">
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=1" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=2" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=3" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=4" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=5" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=6" width="240" height="240" alt=""></a>
+                            </li>
+                        </ul>
+                        <p>거추장스런, <a href="#">어디에나 숨 죽여도 너</a> 청춘 해도 엮어가는 그대, 심장 찬란한 젊음의 실수조차도 꽃보다 않고 쉬지 장엄한 내일의 빛나는 눈부신 청춘의. 야무 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 엮어가는 거추장스런 청춘 다 들리는 고동소리 찬란한 쿵쿵대는 티셔츠 하루를 설레게 보기만 장엄한! 쉬지 어디에나 땀 피어나는, 청춘 세상을 만들 쿵쿵대는. 찬란한 사명으로 젊음의 만들 그대 가슴을!</p>
+                        <p>피어나는 그대 숨 죽여도 하고, 설레게 너야말로 다 들리는 심장 티셔츠. 땀 햇볕처럼, <a href="#">청춘의 젊음의 청춘아!</a> 사명으로 하고 운동화도, 만들 않고 찬란한?</p>
+                        <p><a href="#">야무</a> 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 젊음의 거추장스런 운동화도, 어디에나 하루를 설레게 청춘? 운동화도 씩씩하게, 어디에나, 사명으로 장엄한 쿵쿵대는 꽃처럼 햇볕처럼 너야말로.</p>
+                        <p>거추장스런, <a href="#">어디에나 숨 죽여도 너</a> 청춘 해도 엮어가는 그대, 심장 찬란한 젊음의 실수조차도 꽃보다 않고 쉬지 장엄한 내일의 빛나는 눈부신 청춘의.</p>
+                        <p>피어나는 그대 숨 죽여도 하고, 설레게 너야말로 다 들리는 심장 티셔츠. 땀 햇볕처럼, <a href="#">청춘의 젊음의 청춘아!</a> 사명으로 하고 운동화도, 만들 않고 찬란한?</p>
+                    </div>
+                    <div id="demo-state">
+                        <h3>상태</h3>
+                        <ul class="demo-gallery clearfix">
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=1" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=2" width="240" height="240" alt=""></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="rwd-image" src="http://placehold.it/240x240/4d5acf/fff/?text=3" width="240" height="240" alt=""></a>
+                            </li>
+                        </ul>
+                        <p>거추장스런, <a href="#">어디에나 숨 죽여도 너</a> 청춘 해도 엮어가는 그대, 심장 찬란한 젊음의 실수조차도 꽃보다 않고 쉬지 장엄한 내일의 빛나는 눈부신 청춘의.</p>
+                        <p>피어나는 그대 숨 죽여도 하고, 설레게 너야말로 다 들리는 심장 티셔츠. 땀 햇볕처럼, <a href="#">청춘의 젊음의 청춘아!</a> 사명으로 하고 운동화도, 만들 않고 찬란한? 야무 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 않고 세상을 심장, 하고 장엄한 엮어가는 설레는 운동화도 고동소리 젊음의 만들 설레게 내일의 햇볕처럼 피어나는 꽃처럼 아름답다 티셔츠 너, 어디에나 땀 가슴을 해도, 빛나는 찬란한 흐르는!</p>
+                        <p><a href="#">야무</a> 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 젊음의 거추장스런 운동화도, 어디에나 하루를 설레게 청춘? 운동화도 씩씩하게, 어디에나, 사명으로 장엄한 쿵쿵대는 꽃처럼 햇볕처럼 너야말로.</p>
+                        <p>피어나는 그대 숨 죽여도 하고, 설레게 너야말로 다 들리는 심장 티셔츠. 땀 햇볕처럼, <a href="#">청춘의 젊음의 청춘아!</a> 사명으로 하고 운동화도, 만들 않고 찬란한?</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/demo.js"></script>
 </body>
+
 </html>

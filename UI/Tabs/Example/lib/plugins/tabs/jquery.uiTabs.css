@@ -1,2 +1,94 @@
 /*! jquery.uiTabs.css © yamoo9.net, 2016 */
 
+:visited {
+	color: #4D5ACF;
+}
+
+:focus {
+	outline: 3px solid #4D5ACF;
+	outline-width: 0.1875rem;
+	outline-offset: 2px;
+	outline-offset: 0.125rem;
+	text-decoration: none;
+}
+
+/* 탭 리스트 (ul)
+ * -------------------------------- */
+.uiTabs-tablist {
+	list-style: none;
+	border-bottom: 1px solid #dedede;
+	border-bottom-width: 0.0625rem;
+	padding-left: 0;
+}
+.uiTabs-tablist:after,
+.uiTabs-tablist::after,
+.clearfix:after,
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.uiTabs-tablist li {
+	float: left;
+	width: 33.3333%;
+}
+
+.uiTabs-tablist img {
+	vertical-align: middle;
+}
+
+/* 탭 레이블 (a)
+ * -------------------------------- */
+.uiTabs-tab {
+	box-sizing: border-box;
+	text-decoration: none;
+
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+
+	display: block;
+	padding: 6px 0;
+	padding: 0.375rem;
+	text-align: center;
+	color: #4D5ACF;
+	border-bottom: 3px solid transparent;
+	transition: all 0.2s ease-out;
+}
+
+/* 텝 레이블 활성화
+ * -------------------------------- */
+.uiTabs-tab.uiTabs-on {
+	border-bottom: 3px solid #4D5ACF;
+	border-bottom-width: 0.1875rem;
+}
+
+/* 텝 레이블 포커스 상태
+ * -------------------------------- */
+.uiTabs-tab:focus {
+	outline: none;
+	border-bottom: 3px solid #38D9F1;
+	border-bottom-width: 0.1875rem;
+	color: #38D9F1;
+}
+
+/* 탭 패널 (div)
+ * -------------------------------- */
+.uiTabs-tabpanel {
+	display: none;
+	font-size: 14px;
+	font-size: 0.875rem;
+	color: #3f3e3e;
+}
+
+.rwd-image {
+	width: 100%;
+	height: auto;
+}
+
+/* 텝 레이블 활성화
+ * -------------------------------- */
+.uiTabs-tabpanel.uiTabs-view {
+	display: block;
+}
