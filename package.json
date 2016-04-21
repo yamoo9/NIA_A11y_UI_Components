@@ -1,0 +1,8 @@
+{
+  "name": "NIA_A11y_UI_Components",
+  "version": "0.0.1",
+  "description": "NIA A11y UI Components using WAI-ARIA 1.0",
+  "keywords": ["NIA", "Accessibility", "UI", "Components", "WAI-ARIA"],
+  "author": "yamoo9 (yamoo9@naver.com)",
+  "license": "ISC"
+}

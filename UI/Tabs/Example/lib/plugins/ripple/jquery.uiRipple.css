@@ -1,0 +1,56 @@
+/*! jquery.ui.ripple.css © yamoo9.net, 2016 */
+
+/* uiRipple 플러그인이 연결된 컨테이너 요소 */
+.yamoo9-ui-ripple-container {
+    padding-left: 0;
+}
+
+/* uiRipple 플러그인이 설정된 a 요소의 부모 요소 */
+.yamoo9-ui-ripple-parent {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+/* uiRipple 플러그인이 설정된 a 요소 */
+.yamoo9-ui-ripple {
+    /* 사용자 인터페이스 설정 */
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    /* a 요소 블록화 */
+    display: block;
+}
+
+/* uiRipple 플러그인이 설정된 a 요소의 (다음) 형제 요소 */
+.yamoo9-ui-ripple-ink {
+    position: absolute;
+    /*z-index: 100;*/
+
+    /*자바스크립트를 이용하여 동적으로 코드 추가*/
+    /*
+        top: 사용자 마우스로 클릭한 x 좌표 위치;
+        left: 사용자 마우스로 클릭한 y 좌표 위치;
+        width: .yamoo9-ui-ripple-parent 요소의 가로/세로 중 길이가 큰 길이를 설정;
+        height: .yamoo9-ui-ripple-parent 요소의 가로/세로 중 길이가 큰 길이를 설정;
+     */
+
+    /*리플 배경 색상 설정*/
+    /*background: #7045CF;*/
+    /* 둥근 원 설정 */
+    border-radius: 100%;
+    /* 스케일 조정 */
+    transform: scale(0);
+}
+
+/* 애니메이션 설정 클래스 */
+.yamoo9-ui-ripple-ink.animate {
+    animation: uiRipple 0.6s linear;
+}
+
+/* 애니메이션 정의 */
+@keyframes uiRipple {
+    100% {
+        opacity: 0;
+        transform: scale(4);
+    }
+}
