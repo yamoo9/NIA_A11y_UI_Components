@@ -57,6 +57,9 @@ body {
  * --------------------------------
  * .demo-tabs-2
  */
+ .demo-tabs-2 {
+    font-size: 0.875rem;
+ }
 .demo-tabs-2 .demo-gallery {
     padding-left: 0;
     list-style-type: none;
