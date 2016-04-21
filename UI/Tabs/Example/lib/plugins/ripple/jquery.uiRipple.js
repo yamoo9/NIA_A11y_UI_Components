@@ -113,7 +113,7 @@
 				if ( !this.data('org_bg_color') ) {
 					this.data('org_bg_color', this.css('background'));
 				}
-				this.css('background', '#ff0');
+				// this.css('background', '#ff0');
 				this.parent().css('overflow', 'visible');
 			}
 			// 키보드 포커스 접근성 해제 함수
