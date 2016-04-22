@@ -23,6 +23,7 @@
 </head>
 
 <body>
+
     <div class="page container">
         <header class="page-header">
             <row class="row">
@@ -30,6 +31,25 @@
                 <p class="col-12">탭 메뉴 UI는 뷰(View)간 전환이 손 쉬워야 하며, 카테고리 별 데이터 세트(Categorized Data Sets)를 탐색하기 용이해야 한다.</p>
             </row>
         </header>
+
+        <div class="a11y-hidden" aria-live="polite">
+            <h2>스크린 리더 사용자를 위한 지침</h2>
+            <p>이 페이지는 일반적으로 데스크톱 애플리케이션에서 사용되는 일부 인터랙티브 컨트롤을 포함하고 있습니다. 이러한 컨트롤은 탭 리스트, 메뉴 바, 슬라이더(캐러셀), 트리 뷰 등에서 사용됩니다. 해당 컨트롤은 화살표 키를 사용해서 탐색하는 기능을 수행합니다. 인터랙티브 기능을 사용하기 위해서는 일시적으로 스크린 리더의 가상 탐색 모드(Virtual Navigation Mode)를 작동하지 않도록 해야 합니다. 일부 스크린 리더는 자동적으로 컨트롤 모드를 전환할 수 있습니다만, 그렇지 못한 스크린 리더를 사용한다면 수동으로 가상 탐색 모드를 전환해주어야 합니다. 아래 목록은 자주 사용되는 스크린 리더에서 가상 탐색 모드를 전환하는 방법을 나열한 것입니다.
+            </p>
+            <dl>
+                <!-- 참고 URL: http://xvtech.com/~hyohun71/interkey.txt -->
+                <dt>센스 리더</dt>
+                <dd>가상커서 임시 해제: <code>ctrl + ↑</code> 또는 <code>ctrl + ↓</code>를 누르면 "가상커서 사용 해제" 메시지와 함께 임시 해제 됩니다.</dd>
+                <dd>가상커서 즉시 사용: <code>escape</code> 또는 <code>tab</code>/<code>shift + tab</code>를 누르면 "가상커서 사용 선택" 메시지와 함께 가상 커서가 재게됩니다.</dd>
+                <dt>JAWS</dt>
+                <dd><code>JAWS KEY + Z</code></dd>
+                <dt>NVDA</dt>
+                <dd><code>NVDA KEY + SPACE</code></dd>
+                <dt>WindowEyes</dt>
+                <dd><code>Ctrl + Shift + A</code></dd>
+            </dl>
+        </div>
+
         <main>
             <div class="row">
                 <!-- WAI-ARIA 사용 예제 -->

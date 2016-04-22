@@ -91,7 +91,7 @@
 				$tab.attr({
 					// 속성
 					'id': tab_id, // tab 요소 id 설정
-					'aria-controls': tabpanel_id,
+					'aria-controls': tabpanel_id.replace(/#/,''),
 					// 상태
 					'tabindex': -1,
 					'aria-hidden': true,

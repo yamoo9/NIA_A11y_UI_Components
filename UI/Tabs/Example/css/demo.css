@@ -1,6 +1,16 @@
 /*! demo.css © yamoo9.net, 2016 */
 @import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
 
+::selection {
+    background-color: #4d5acf;
+    color: #fff;
+}
+
+::-moz-selection {
+    background-color: #4d5acf;
+    color: #fff;
+}
+
 body {
     font-family: "Noto Sans KR", sans-serif;
     letter-spacing: -0.03em;
